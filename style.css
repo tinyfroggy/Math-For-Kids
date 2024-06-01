@@ -1,0 +1,380 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Luckiest Guy';
+    background-color: #e6e6ea;
+}
+
+.container{
+    padding: 20px;
+    overflow: hidden;
+    background-color: #fe4a49;
+}
+
+.container h1{
+    float: left;
+    margin-left: 10%;
+    color: white;
+}
+
+.container ul{
+    list-style-type: none;
+    font-size: 22px;
+    margin-left: 60%;
+}
+
+.container li{
+    margin-top: 10px;
+    float: left;
+    padding: 0 20px 0 20px;
+}
+
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+.current a::after{
+    content: '_';
+    background-color: white;
+    font-size: 4px;
+    display: block;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 82% 18%;
+}
+
+.equation{
+    font-size: 65px;
+    background-color: white;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 15%;
+    /* margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px; */
+    margin: 10px;
+}
+
+.equation h1{
+    display: inline;
+    padding: 20px;
+}
+
+.answer-options{
+    font-size: 67px;
+    margin-right: 10px;
+}
+
+.answer-options h1{
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#option1{
+    background-color: #fe4a49;
+    transition: 1s;
+}
+
+#option1:hover{
+    color: #fe4a49;
+    background-color: white;
+}
+
+#option2{
+    background-color: #2ab7ca;
+    transition: 1s;
+}
+
+#option2:hover{
+    color: #2ab7ca;
+    background-color: white;
+}
+
+#option3{
+    background-color: #fed766;
+    transition: 1s;
+}
+
+#option3:hover{
+    color: #fed766;
+    background-color: white;
+}
+
+#playButton {
+    position: absolute;
+    left: 600px;
+    top: 350px;
+    padding: 15px 30px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    display: inline-block; 
+    margin: 0 auto; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease; 
+  }
+
+  #playButton:hover {
+    background-color: #45a049;
+  }
+
+  #div-start{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.31);
+  }
+/*  */
+#restartBtn {
+    position: absolute;
+    left: 650px;
+    top: 450px;
+    padding: 15px 30px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(202, 9, 9);
+    color: white;
+    border-radius: 5px;
+    display: inline-block; 
+    margin: 0 auto; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease; 
+  }
+
+  #restartBtn:hover {
+    background-color: rgba(200, 9, 9, 0.482);
+  }
+
+  #bord{
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  #right-bord{
+    margin-top: 50px;
+  }
+
+  #wrong-bord{
+    margin-top: 50px;
+  }
+
+  #div-end{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.31);
+
+  }
+/*  */
+
+
+  #safeTimer{
+    font-size: 30px;
+    margin-left: 50px;
+    display: flex;
+    
+  }
+
+  #wrong-answer{
+    display: flex;
+    justify-content: center;
+  }
+
+  #safeTimerDisplay,#wrong ,#right{
+    margin-left: 10px;
+    color: rgb(43, 30, 30);
+  }
+
+  #safeTimerDisplay{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+ h2{
+    margin-left: 20px;
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+    .container {
+        text-align: center;
+    }
+
+    .container h1 {
+        float: none;
+        margin: 0;
+    }
+
+    .container ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .container li {
+        float: none;
+        display: inline-block;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .equation {
+        font-size: 50px;
+        padding-top: 5%;
+    }
+
+    .answer-options {
+        font-size: 50px;
+        margin-right: 0;
+    }
+
+    #safeTimer {
+        font-size: 20px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    h2 {
+        margin-left: 0;
+    }
+
+    #div-start {
+        width: 100%;
+        height: 100%;
+    }
+
+    #div-end {
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .equation {
+        font-size: 40px;
+        padding-top: 5%;
+    }
+
+    .answer-options {
+        font-size: 40px;
+    }
+
+    #playButton {
+        font-size: 30px;
+        padding: 10px 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #restartBtn {
+        font-size: 30px;
+        padding: 10px 20px;
+        left: 50%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+    }
+
+    #safeTimer {
+        font-size: 15px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin-left: 0;
+    }
+
+    #div-start {
+        width: 100%;
+        height: 100%;
+    }
+
+    #div-end {
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+  .equation {
+      font-size: 40px;
+      padding-top: 5%;
+  }
+
+  .answer-options {
+      font-size: 40px;
+  }
+
+  #playButton {
+      font-size: 30px;
+      padding: 10px 20px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  #restartBtn {
+      font-size: 30px;
+      padding: 10px 20px;
+      left: 50%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+  }
+
+  #safeTimer {
+      font-size: 15px;
+      margin-left: 0;
+      justify-content: center;
+  }
+
+  h2 {
+      font-size: 15px;
+      margin-left: 0;
+  }
+
+  #div-start {
+      width: 100%;
+      height: 100%;
+  }
+
+  #div-end {
+      width: 100%;
+      height: 100%;
+      font-size: 30px;
+  }
+}
+

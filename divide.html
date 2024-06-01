@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>divide</title>
+</head>
+
+<body>
+
+    <audio id="myAudio">
+        <source src="wrong.mp3">
+    </audio>
+
+    <header>
+        <div class="container">
+            <h1>MATH 4 kids</h1>
+
+            <ul>
+                <li ><a href="index.html">Add</a></li>
+                <li><a href="subtract.html">Subtract</a></li>
+                <li><a href="multiply.html">Multiply</a></li>
+                <li class="current"><a href="divide.html">Divide</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="safeTimer">
+        <h2 style="color: rgb(158, 111, 51);">Timer:</h2>
+        <h2 id="safeTimerDisplay">60</h2>
+        <h2 style="color: rgb(238, 52, 52);">wrong answers:</h2>
+        <h2 id="wrong">0</h2>
+        <h2 style="color: rgb(13, 157, 13);">right answers:</h2>
+        <h2 id="right">0</h2>
+    </div>
+
+    <div id="div-start">
+        <button style="font-family: 'Luckiest Guy';" id="playButton">Start game</button>
+    </div>
+
+    <div id="div-end" >
+        <div id="bord" >
+            <h1>Your Score in <span style="color: rgb(26, 194, 26);">60</span> sec</h1>
+            <h2 id="wrong-bord" style="color: rgb(238, 52, 52);">wrong answers: <span id="wrong-span">0</span></h2>
+            <h2 id="right-bord" style="color: rgb(13, 157, 13);">right answers: <span id="right-span">0</span></h2>
+            <button style="font-family: 'Luckiest Guy';" id="restartBtn">Restart game</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="equation">
+            <h1 id="num1" style="color: #fe4a49;">1</h1>
+            <h1 style="color: #2ab7ca;">÷</h1>
+            <h1 id="num2" style="color: #fed766;">2</h1>
+            <h1 style="color: #fe4a49;">=</h1>
+            <h1 style="color: rgb(177, 174, 174);">?</h1>
+        </div>
+
+        <div class="answer-options">
+            <h1 id="option1">1</h1>
+            <h1 id="option2">1</h1>
+            <h1 id="option3">1</h1>
+        </div>
+    </div>
+    <script src="./divideVChatgpt.js"></script>
+</body>
+
+</html>
